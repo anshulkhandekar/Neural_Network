@@ -1,6 +1,8 @@
+#Importing libraries
 import numpy as np
 from nnfs.datasets import spiral_data
 
+#Initializing input, weight, and bias matrices
 inputs = [[1.0,2.0,3.0,2.5],
           [2.0, 5.0, -1.0, 2.0], 
           [-1.5, 2.7, 3.3, -0.8]]
@@ -13,6 +15,7 @@ weights2 = [[0.1, -0.14, 0.5],
             [-0.44, 0.73, -0.13]]
 biases2 = [-1, 2, -0.5]
 
+#Feeding inputs to first layer and then resulting outputs to second layer
 layer_outputs1 = np.dot(inputs, np.array(weights).T) + biases
 layer_outputs2 = np.dot(layer_outputs1, np.array(weights2).T) + biases2
 
