@@ -1,7 +1,14 @@
 #Importing libraries
 import numpy as np
+import nnfs
 from nnfs.datasets import spiral_data
+import matplotlib.pyplot as plt
+nnfs.init()
 
+
+X, y = spiral_data(samples=100, classes=3)
+plt.scatter(X[:,0], X[:,1])
+plt.show()
 #Initializing input, weight, and bias matrices
 inputs = [[1.0,2.0,3.0,2.5],
           [2.0, 5.0, -1.0, 2.0], 
